@@ -1,0 +1,14 @@
+<h1>WIKINONIMOUS</h1>
+<p>Articles ABOUT EVERYTHING, anonymous</p>
+
+<% @articles.each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article %></h2>
+    <%= article.content[0..100][2..-2] %>
+  </article>
+<% end %>
+
+<%= link_to "Create", new_article_path()%>
+
+
+
